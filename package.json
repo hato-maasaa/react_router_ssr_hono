@@ -1,5 +1,5 @@
 {
-  "name": "cloudflare-pages-rr7-hono",
+  "name": "react-router-ssr-hono",
   "private": true,
   "type": "module",
   "scripts": {
