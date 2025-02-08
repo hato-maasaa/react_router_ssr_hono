@@ -1,6 +1,9 @@
 # rr7-hono-for-cloudflare
 react router v7(rr7)からssrに対応したので、rr7とhonoを用いてCloudflare Pagesにデプロイするためのテンプレートを作成しました
 
+パッケージ管理ツールはnpmを利用することを想定しています。
+プロダクトの要件に合わせてツールの変更をお願いします
+
 ## feature
 - 🤖 vitest is very fast 
 - 🎉 TailwindCSS for styling

@@ -7,7 +7,8 @@
     "deploy": "npm run build && wrangler deploy",
     "dev": "react-router dev",
     "start": "wrangler dev",
-    "typecheck": "react-router typegen && tsc -b"
+    "typecheck": "react-router typegen && tsc -b",
+    "test": "vitest"
   },
   "dependencies": {
     "@hono/vite-dev-server": "^0.18.1",
@@ -25,13 +26,19 @@
     "@cloudflare/workers-types": "^4.20241112.0",
     "@react-router/dev": "^7.1.5",
     "@tailwindcss/vite": "^4.0.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^29.5.14",
     "@types/node": "^20",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.1",
+    "happy-dom": "^17.0.0",
     "tailwindcss": "^4.0.0",
     "typescript": "^5.7.2",
     "vite": "^5.4.11",
     "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.0.5",
     "wrangler": "^3.87.0"
   }
 }

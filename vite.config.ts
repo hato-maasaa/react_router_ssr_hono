@@ -12,6 +12,12 @@ export default defineConfig(() => ({
       externalConditions: ["workerd", "worker"],
     },
   },
+  test: {
+    globals: true,
+    environment: 'happy-dom',
+    setupFiles: './vitest.setup.ts',
+    include: ['app/**/*.test.ts', 'app/**/*.test.tsx'],
+  },
   plugins: [
     serverAdapter({
       adapter,
