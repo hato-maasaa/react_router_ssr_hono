@@ -1,6 +1,12 @@
 import { UNSAFE_SingleFetchRedirectSymbol } from "react-router";
 import { encode } from "turbo-stream";
 
+/**
+ * remix2.9から追加されたシングルfetchに対応するための関数
+ * 
+ * シングルfetchについては以下のリンクを参照
+ * https://remix.run/docs/en/main/guides/single-fetch
+ */
 export function singleFetchRedirect(response: Response) {
   const result = {
     [UNSAFE_SingleFetchRedirectSymbol]: getSingleFetchRedirect(

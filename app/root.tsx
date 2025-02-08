@@ -45,6 +45,9 @@ export default function App() {
   return <Outlet />;
 }
 
+/**
+ * システムエラーが起きた際の画面をここで設定しています
+ */
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   let message = "Oops!";
   let details = "An unexpected error occurred.";

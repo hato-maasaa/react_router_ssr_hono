@@ -6,7 +6,6 @@ const app = new Hono<HonoEnv>();
 
 app.use(authMiddleware);
 
-
 const routes = app.get("/sample", (c) => {
    return  c.json({ message: "Hello, World!" });
 });

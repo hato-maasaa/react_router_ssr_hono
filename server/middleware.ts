@@ -7,15 +7,16 @@ import { singleFetchRedirect } from "~/util/navigation/redirect";
 
 type ContextType = Context<HonoEnv, never, {}>; 
 
+/**
+ * 認証ミドルウェア
+ */
 export const authMiddleware = async (c: ContextType, next:Next) => {
     const url = new URL(c.req.url);
   
-    // 認証が不要なページはスキップ
     if (!url.pathname.startsWith("/private")) {
       return next();
     }
   
-    // クッキーからセッションデータを取得
     const userName = await SessionCookie(
       c.env.SESSION_COOKIE_SECRETS,
       c.env.APP_ENV === "production",
@@ -25,7 +26,6 @@ export const authMiddleware = async (c: ContextType, next:Next) => {
       return next();
     }
   
-    // 認証に失敗した場合はログイン画面へリダイレクト
     const redirectResponse = redirect("/login");
   
     // HTML要求ではない場合はfetchリクエストへのレスポンスを返す
