@@ -1,9 +1,14 @@
 # rr7-hono-for-cloudflare
 react router v7(rr7)からssrに対応したので、rr7とhonoを用いてCloudflare Pagesにデプロイするためのテンプレートを作成しました
 
-## 認証形式
-honoのmiddlewareを利用してユーザの認証をすることができる
-
+## feature
+- 🤖 vitest is very fast 
+- 🎉 TailwindCSS for styling
+- 🚀 Server-side rendering
+- ⚡️ Hot Module Replacement (HMR)
+- 📦 Asset bundling and optimization
+- 🔄 Data loading and mutations
+- 🔒 TypeScript by default
 
 ## セットアップ
 ### インストール
@@ -24,7 +29,10 @@ npm run build
 
 
 ## システム仕様
-1. Linkを用いたナビゲーションについて
+1. 認証形式
+honoのmiddlewareを利用してユーザの認証をすることができる
+
+2. Linkを用いたナビゲーションについて
 ```bash
 <Link to="/private" reloadDocument>
 ```
