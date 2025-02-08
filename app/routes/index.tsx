@@ -18,18 +18,12 @@ export default function Home() {
 
       <div className="grid grid-cols-1 gap-3">
         <Link to="/private" className="underline">
-          ダッシュボード
+          ダッシュボード(system errorが起きる)
         </Link>
         <Link to="/private" className="underline" reloadDocument>
           ダッシュボード（reloadDocument）
         </Link>
-        <button
-          type="button"
-          className="w-fit underline"
-          onClick={fetchDashboard}
-        >
-          ダッシュボード（fetch）
-        </button>
+       
         <Link to="/login" className="underline">
           ログイン
         </Link>
