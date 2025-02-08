@@ -5,7 +5,7 @@ react router v7(rr7)からssrに対応したので、rr7とhonoを用いてCloud
 プロダクトの要件に合わせてツールの変更をお願いします
 
 ## feature
-- 🤖 vitest is very fast 
+- 🤖 testing tool is vitest 
 - 🎉 TailwindCSS for styling
 - 🚀 Server-side rendering
 - ⚡️ Hot Module Replacement (HMR)
@@ -25,6 +25,11 @@ npm run dev
 ### ビルド実行
 ```sh
 npm run build
+```
+
+### テスト
+```sh
+npm run test
 ```
 
 ## デプロイ方法
