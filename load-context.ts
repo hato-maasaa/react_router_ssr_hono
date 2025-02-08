@@ -1,11 +1,15 @@
 import type { Context } from "hono";
 import type { AppLoadContext } from "react-router";
 import type { PlatformProxy } from "wrangler";
+import { SessionCookie } from "./app/cookie.server";
 
 type Cloudflare = Omit<PlatformProxy<Env>, "dispose">;
 
 export interface HonoEnv {
-  Bindings: Env;
+    Variables: {
+        userName?: string;
+    };
+    Bindings: Env;
 }
 
 declare module "react-router" {
@@ -15,6 +19,9 @@ declare module "react-router" {
       context: Context<HonoEnv>;
     };
     isProduction: boolean;
+    sessionCookie: {
+        serialize: (value: string) => Promise<string>;
+    };
   }
 }
 
@@ -27,11 +34,22 @@ type GetLoadContext = (args: {
 }) => AppLoadContext;
 
 export const getLoadContext: GetLoadContext = ({ context }) => {
-  const {
-    cloudflare: { env },
-  } = context;
-  return {
-    ...context,
-    isProduction: env.APP_ENV === "production",
-  };
+    const {
+        cloudflare: { env },
+      } = context;
+    
+      const isProduction = env.APP_ENV === "production";
+    
+      return {
+        ...context,
+        isProduction,
+        sessionCookie: {
+          serialize: async (value: string) => {
+            return await SessionCookie(
+              env.SESSION_COOKIE_SECRETS,
+              isProduction,
+            ).serialize(value);
+          },
+        },
+      };
 };

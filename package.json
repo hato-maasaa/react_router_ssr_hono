@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "react-router build",
+    "build": "npx wrangler types && react-router build",
     "deploy": "npm run build && wrangler deploy",
     "dev": "react-router dev",
     "start": "wrangler dev",
@@ -18,7 +18,8 @@
     "isbot": "^5.1.17",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router": "^7.1.5"
+    "react-router": "^7.1.5",
+    "turbo-stream": "^3.0.1"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241112.0",
