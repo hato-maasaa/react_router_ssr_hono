@@ -1,8 +1,15 @@
 import { Link } from "react-router";
+import { apiClient } from "~/util/api/apiClient";
+
+export const loader = async () => {
+  const sampleData = await apiClient.sample.$get();
+  const { message } = await sampleData.json();
+  console.log(message);
+};
 
 export default function Home() {
   async function fetchDashboard() {
-    const res = await fetch("/private");
+    await fetch("/private");
   }
 
   return (
