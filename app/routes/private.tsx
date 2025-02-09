@@ -5,6 +5,10 @@ import { createUserSchema } from "schemas/createUserSchema";
 import { parseWithZod } from "@conform-to/zod";
 import { CreateUserForm } from "../features/users/components/createUserForm";
 
+/**
+ * action関数を実行後、画面のレンダリングが行われるので
+ * コンポーネント単位でレンダリングを行いたいときはuseActionDataを使う
+ */
 export async function action({request}: Route.ActionArgs)  {
   const formData = await request.formData();
 

@@ -1,7 +1,7 @@
 import { Form } from "react-router"
-import { useCreateUser } from "../hooks/useCreateUser";
+import { useCreateUser } from "app/features/users/hooks/useCreateUser";
 import { getFormProps, type SubmissionResult } from "@conform-to/react";
-import { InputForm } from "~/app/components/form/InputForm";
+import { InputForm } from "app/components/form/InputForm";
 
 type CreateUserFormProps = {
     lastResult?: SubmissionResult<string[]>;
