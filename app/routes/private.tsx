@@ -1,7 +1,7 @@
 import { Form, useActionData } from "react-router";
 import type { Route } from "./+types/private";
 import { apiClient } from "~/util/api/apiClient";
-import { createUserSchema } from "~/schemas/createUserSchema";
+import { createUserSchema } from "schemas/createUserSchema";
 import { parseWithZod } from "@conform-to/zod";
 
 export async function action({request}: Route.ActionArgs)  {
