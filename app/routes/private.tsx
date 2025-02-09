@@ -1,6 +1,6 @@
 import { Form, useActionData } from "react-router";
 import type { Route } from "./+types/private";
-import { apiClient } from "~/lib/apiClient";
+import { apiClient } from "app/lib/apiClient";
 import { createUserSchema } from "schemas/createUserSchema";
 import { parseWithZod } from "@conform-to/zod";
 

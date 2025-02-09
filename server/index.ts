@@ -1,11 +1,10 @@
 import { Hono } from "hono";
-import type { HonoEnv } from "../load-context";
-import { authMiddleware } from "./middleware";
+import type { HonoEnv } from "~/load-context";
+import { authMiddleware } from "server/middleware";
 import { zValidator } from "@hono/zod-validator";
 import { getUserSchema } from "schemas/getUserSchema";
-import { getWhetherSchema } from "~/schemas/getWhetherSchema";
+import { getWhetherSchema } from "schemas/getWhetherSchema";
 import { createUserSchema } from "schemas/createUserSchema";
-
 
 const app = new Hono<HonoEnv>();
 
