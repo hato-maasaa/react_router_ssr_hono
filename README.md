@@ -51,16 +51,17 @@ const res =  await apiClient.sample.$get();
 
 ├─schemas # クライアントとapiとで共通のschemaを配置する
 ├─app
-  ├─assets    # 画像やフォントなどの静的ファイル
-  ├─routes    # ルーティングの設定
-  ├─features  # 機能ベースモジュール
-  ├─hooks     # アプリケーション全体で使用できる共通hooks
-  ├─lib       # ライブラリをアプリケーション用に設定して再度エクスポートしたもの
-  ├─providers # アプリケーションのすべてのプロバイダー
-  ├-types     # アプリケーション全体で使用される基本的な型の定義
-  └─utils     # 共通のユーティリティ関数
-├─functions   # Cloudflare Pagesのfunctions機能利用に必要なディレクトリ
-└─server      # サーバーのアーキテクトはプロダクトに任せる
+  ├─assets     # 画像やフォントなどの静的ファイル
+  ├─components # アプリケーション全体で使用できる共通components
+  ├─routes     # ルーティングの設定
+  ├─features   # 機能ベースモジュール
+  ├─hooks      # アプリケーション全体で使用できる共通hooks
+  ├─lib        # ライブラリをアプリケーション用に設定して再度エクスポートしたもの
+  ├─providers  # アプリケーションのすべてのプロバイダー
+  ├-types      # アプリケーション全体で使用される基本的な型の定義
+  └─utils      # 共通のユーティリティ関数
+├─functions    # Cloudflare Pagesのfunctions機能利用に必要なディレクトリ
+└─server       # サーバーのアーキテクトはプロダクトに任せる
 
 ```
 

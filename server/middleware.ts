@@ -2,8 +2,8 @@ import type { Context } from "hono";
 import type { Next } from "hono/types";
 import type { HonoEnv } from "load-context";
 import { redirect } from "react-router";
-import { SessionCookie } from "~/cookie.server";
-import { singleFetchRedirect } from "~/util/navigation/redirect";
+import { SessionCookie } from "app/cookie.server";
+import { singleFetchRedirect } from "app/util/navigation/redirect";
 
 type ContextType = Context<HonoEnv, never, {}>; 
 

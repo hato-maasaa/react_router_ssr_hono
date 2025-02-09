@@ -11,6 +11,13 @@ const app = new Hono<HonoEnv>();
 app.use(authMiddleware);
 
 const routes = app
+    .post("/user/:id", zValidator("json", createUserSchema), zValidator("param", getUserSchema),  (c) => {
+      const formData = c.req.valid("json");
+      return c.json({ user: formData });
+    })
+    .post("/sample", (c) => {
+        return c.json({ message: "Hello, World!" });
+    })
     .get("/sample", (c) => {
         return  c.json({ message: "Hello, World!" });
     })
@@ -18,12 +25,8 @@ const routes = app
       return c.json({ userID: c.req.param("id") });
     })
     .get("/whether", zValidator("query", getWhetherSchema), (c) => {
+      console.log("whether");
       return c.json({ whether: c.req.query("prefectureID") });
-    })
-    .post("/sample", zValidator("form", createUserSchema),  (c) => {
-      const formData = c.req.valid("form");
-      console.log(typeof formData.age);
-      return c.json({ user: formData });
     });
 
 export type AppType = typeof routes
