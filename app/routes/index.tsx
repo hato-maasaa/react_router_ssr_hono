@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { apiClient } from "~/util/api/apiClient";
+import { apiClient } from "~/lib/api/apiClient";
 
 export const loader = async () => {
   const sampleData = await apiClient.sample.$get();
