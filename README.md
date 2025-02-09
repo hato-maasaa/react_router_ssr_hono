@@ -4,6 +4,8 @@ react router v7(rr7)からssrに対応したので、rr7とhonoを用いてCloud
 パッケージ管理ツールはnpmを利用することを想定しています。
 プロダクトの要件に合わせてツールの変更をお願いします
 
+APIの呼び出しなどに関しては、サンプルのコードがありますのでそちらを参照してください
+
 ## feature
 - 🤖 testing tool is vitest 
 - ✏️ conform for validating form
@@ -66,13 +68,3 @@ const res =  await apiClient.sample.$get();
 ```
 
 ＊bulletproof-reactについては[こちら](https://github.com/alan2207/bulletproof-react)を参照してください
-
-## システム仕様
-1. 認証形式
-honoのmiddlewareを利用してユーザの認証をすることができる
-
-2. Linkを用いたナビゲーションについて
-```bash
-<Link to="/private" reloadDocument>
-```
-のように[reloadDocument]を用いないナビゲーションが利用できないので注意をしてください
