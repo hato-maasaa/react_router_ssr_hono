@@ -54,6 +54,7 @@ const res =  await apiClient.sample.$get();
   ├─features  # 機能ベースモジュール
   ├─hooks     # アプリケーション全体で使用できる共通hooks
   ├─lib       # ライブラリをアプリケーション用に設定して再度エクスポートしたもの
+  ├─pages     # 各ページのルートファイルを配置
   ├─providers # アプリケーションのすべてのプロバイダー
   ├─schemas   # クライアントとapiとで共通のschemaを配置する
   ├-types     # アプリケーション全体で使用される基本的な型の定義
