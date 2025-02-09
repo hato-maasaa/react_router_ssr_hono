@@ -3,7 +3,7 @@ import type { Route } from "./+types/private";
 import { apiClient } from "app/lib/apiClient";
 import { createUserSchema } from "schemas/createUserSchema";
 import { parseWithZod } from "@conform-to/zod";
-import { CreateUserForm } from "../features/users/components/createUserForm";
+import { CreateUserForm } from "app/features/users/components/createUserForm";
 
 /**
  * action関数を実行後、画面のレンダリングが行われるので
