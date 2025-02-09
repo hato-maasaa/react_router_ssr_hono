@@ -6,6 +6,7 @@ react router v7(rr7)からssrに対応したので、rr7とhonoを用いてCloud
 
 ## feature
 - 🤖 testing tool is vitest 
+- ✏️ conform for validating form
 - 🎉 TailwindCSS for styling
 - 🚀 Server-side rendering
 - ⚡️ Hot Module Replacement (HMR)
@@ -34,6 +35,15 @@ npm run test
 
 ## デプロイ方法
 ここは後で追加
+
+## RPCの利用方法
+```bash
+省略~~~
+const res =  await apiClient.sample.$get();
+```
+これで/sampleへのgetリクエストが送られます。
+
+#### 
 
 
 ## システム仕様

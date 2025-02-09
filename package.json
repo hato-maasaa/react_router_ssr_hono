@@ -11,7 +11,10 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "@conform-to/react": "^1.2.2",
+    "@conform-to/zod": "^1.2.2",
     "@hono/vite-dev-server": "^0.18.1",
+    "@hono/zod-validator": "^0.4.2",
     "@react-router/node": "^7.1.5",
     "@react-router/serve": "^7.1.5",
     "hono": "^4.7.0",
@@ -20,7 +23,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router": "^7.1.5",
-    "turbo-stream": "^3.0.1"
+    "turbo-stream": "^3.0.1",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241112.0",
