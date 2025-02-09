@@ -43,8 +43,26 @@ const res =  await apiClient.sample.$get();
 ```
 これで/sampleへのgetリクエストが送られます。
 
-#### 
+## ディレクトリ構成
+「bulletproof-react」を参考にディレクトリを作成
 
+```bash
+.
+├─app
+  ├─assets    # 画像やフォントなどの静的ファイル
+  ├─routes    # ルーティングの設定
+  ├─features  # 機能ベースモジュール
+  ├─hooks     # アプリケーション全体で使用できる共通hooks
+  ├─lib       # ライブラリをアプリケーション用に設定して再度エクスポートしたもの
+  ├─providers # アプリケーションのすべてのプロバイダー
+  ├─schemas   # クライアントとapiとで共通のschemaを配置する
+  ├-types     # アプリケーション全体で使用される基本的な型の定義
+  └─utils     # 共通のユーティリティ関数
+└─server      # サーバーのアーキテクトはプロダクトに任せる
+
+```
+
+＊bulletproof-reactについては[こちら](https://github.com/alan2207/bulletproof-react)を参照してください
 
 ## システム仕様
 1. 認証形式
